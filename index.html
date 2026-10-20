@@ -96,3 +96,47 @@
     <div id="step-card" class="hidden space-y-4 card-enter">
       
       <div class="bg-gradient-to-b from-rose-50 to-pink-50/50 border border-rose-200 rounded-3xl p-6 relative overflow-hidden shadow-inner">
+        <div class="text-4xl mb-2">🌸</div>
+        
+        <h2 id="card-header" class="text-2xl font-bold text-rose-600 font-cursive mb-3">Gửi Mẹ Yêu!</h2>
+        
+        <p id="card-message" class="text-gray-700 text-sm leading-relaxed font-semibold italic min-h-[100px] flex items-center justify-center px-2">
+          "Lời chúc sẽ xuất hiện ở đây..."
+        </p>
+
+        <div class="mt-4 pt-3 border-t border-rose-200/60 flex items-center justify-between text-xs text-rose-500 font-bold">
+          <span>💐 Happy Women's Day</span>
+          <span>❤️ 20/10/2026</span>
+        </div>
+      </div>
+
+      <!-- CÁC NÚT THAO TÁC -->
+      <div class="grid grid-cols-2 gap-2">
+        <button onclick="changeGreeting()" class="w-full py-3 bg-white border border-rose-300 text-rose-600 rounded-2xl text-xs font-bold hover:bg-rose-50 transition shadow-sm flex items-center justify-center gap-1">
+          <i class="fa-solid fa-rotate"></i> Đổi lời chúc khác
+        </button>
+        <button onclick="copyGreeting()" class="w-full py-3 bg-white border border-rose-300 text-rose-600 rounded-2xl text-xs font-bold hover:bg-rose-50 transition shadow-sm flex items-center justify-center gap-1">
+          <i class="fa-regular fa-copy"></i> Sao chép thiệp
+        </button>
+      </div>
+
+      <button onclick="resetCard()" class="w-full py-3 bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-2xl text-xs font-bold shadow-md hover:opacity-95 transition flex items-center justify-center gap-2">
+        <i class="fa-solid fa-arrow-left"></i> Tạo thiệp chúc khác
+      </button>
+
+    </div>
+
+  </main>
+
+  <!-- JAVASCRIPT XỬ LÝ NỘI DUNG VÀ HIỆU ỨNG -->
+  <script>
+    // BỘ DỮ LIỆU LỜI CHÚC DẠT DÀO TÌNH CẢM
+    const dataGreetings = {
+      mom: [
+        "Nhân ngày 20/10, con chúc Mẹ luôn mạnh khỏe, hạnh phúc và bình an. Cảm ơn Mẹ vì đã luôn là tựa sơn vững chắc và yêu thương con vô điều kiện! 💖🌸",
+        "Mẹ ơi, con chúc Mẹ ngày 20/10 tràn ngập nụ cười, sống vui khỏe mỗi ngày bên con cháu. Con yêu Mẹ rất nhiều! 🌷✨",
+        "Cảm ơn Mẹ đã hy sinh và chăm sóc con suốt những năm tháng qua. Chúc Mẹ yêu của con ngày Phụ nữ Việt Nam thật nhiều niềm vui và luôn thảnh thơi! 👑💐",
+        "Chúc Mẹ ngày 20/10 vạn sự như ý, luôn tươi trẻ, tràn đầy sức khỏe và lúc nào cũng là người phụ nữ tuyệt vời nhất trong lòng con! 🌺❤️",
+        "Con không biết nói lời hay ý đẹp, chỉ mong Mẹ luôn khỏe mạnh, ít bận lòng suy nghĩ và mãi mãi cười tươi như thế này Mẹ nhé! 🎁💖"
+      ],
+      lover:
